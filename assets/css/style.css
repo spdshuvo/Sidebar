@@ -6,22 +6,163 @@ Version: 1.00
 Table of Content
 ----------------
 
-1. head part
-	1.1. nav part
-	1.2. slider part
-2. about part
-3. counter part
-4. work part
-5. services part
-7. skill part
-8. team part
-9. comments  part
-10. pricing part
-11. video part
-12. bolg part
-13. client part
-14. contact part
-15. footer part
-*/
 /*Common css */
-a
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+ul,
+span,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+#sidebar {
+	width: 250px;
+	height: 100%;
+	background-color: #212428;
+	position: fixed;
+	left: -250px;
+	top: 0;
+	padding: 20px 0px 20px 20px;
+	transition: all linear 0.3s;
+	-webkit-transition: all linear 0.3s;
+	-moz-transition: all linear 0.3s;
+	-ms-transition: all linear 0.3s;
+	-o-transition: all linear 0.3s;
+}
+
+#sidebar.active {
+	left: 0;
+}
+
+#sidebar #collapse_menu_icon {
+	position: absolute;
+	left: calc(100% + 20px);
+	top: 10px;
+	color: #222222;
+	padding: 5px 10px;
+	background-color: #ddd;
+	border-radius: 5px;
+	-webkit-border-radius:;
+	-moz-border-radius:;
+	-ms-border-radius:;
+	-o-border-radius:;
+}
+
+#sidebar.active #collapse_menu_icon {
+	position: absolute;
+	left: 200px;
+	top: 10px;
+	color: red;
+	padding: 5px 10px;
+	background-color: #ddd;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+}
+#sidebar #collapse_menu_icon:focus{
+	box-shadow: none;
+}
+#sidebar #collapse_menu_icon:after {
+	content: "\f0c9";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+
+
+}
+
+#sidebar.active #collapse_menu_icon:after {
+	content: "\f00d";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+
+}
+
+#sidebar #nav {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+}
+
+#sidebar #nav::-webkit-scrollbar {
+	width: 10px;
+	background-color: #565b61;
+}
+
+#sidebar #nav::-webkit-scrollbar-thumb {
+	background-color: #05070a;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+#sidebar .logo a {
+	display: block;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: cursive;
+	padding-top: 20px;
+	text-transform: uppercase;
+	color: #ddd;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#nav ul li {
+	box-shadow: 10px 10px 19px #1c1e22,
+		-10px -10px 19px #262a2e;
+	background-color: linear-gradient(145deg, #1e2024, #23272b);
+	;
+}
+
+#nav ul li a {
+	display: block;
+	padding: 5px;
+	margin-bottom: 10px;
+	color: #ddd;
+	font-size: 20x;
+	position:relative;
+}
+#nav ul li a[data-bs-toggle="collapse"]::after{
+	content: "\f053";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position:absolute;
+	right: 20px;
+	top: 0;
+	transition: all linear 0.3s;
+	-webkit-transition: all linear 0.3s;
+	-moz-transition: all linear 0.3s;
+	-ms-transition: all linear 0.3s;
+	-o-transition: all linear 0.3s;
+}
+#nav ul li a[data-bs-toggle="collapse"][aria-expanded="true"]::after{
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+}
+#nav ul li ul li a {
+	font-size: 16px;
+	margin-left: 10px;
+}
